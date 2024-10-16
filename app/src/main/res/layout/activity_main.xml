@@ -22,14 +22,27 @@
         >
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="100dp"
+            android:id="@+id/expressionTextView"
+            android:layout_height="wrap_content"
+            android:textSize="60sp"
             android:text="0"
-            android:gravity="right"
+            android:gravity="end"
             android:background="#DEDEDE"
-            />
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent" />
+
+        <!-- TextView hiển thị kết quả -->
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="0"
+            android:gravity="end"
+            android:background="#EFEFEF"
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent" />
     </LinearLayout>
 
     <LinearLayout
