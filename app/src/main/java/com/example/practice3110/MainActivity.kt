@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Ánh xạ các view
         numberToCalc = findViewById(R.id.numberToCalc)
         listSelect = findViewById(R.id.listSelect)
         buttonShow = findViewById(R.id.buttonShow)
@@ -40,16 +39,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun showNumbers() {
         val inputText = numberToCalc.text.toString()
-        textViewError.text = "" // Xóa lỗi trước khi xử lý
+        textViewError.text = ""
 
-        // Kiểm tra dữ liệu nhập vào có hợp lệ không
         val n = inputText.toIntOrNull()
         if (n == null || n < 0) {
             textViewError.text = "Vui lòng nhập một số nguyên dương."
             return
         }
 
-        // Lấy ID của RadioButton được chọn
         val selectedId = listSelect.checkedRadioButtonId
         val numbers = when (selectedId) {
             R.id.radioButtonEven -> findEven(n)
@@ -61,7 +58,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Cập nhật ListView với kết quả
         val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, numbers)
         listView.adapter = arrayAdapter
     }

@@ -17,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- EditText with hint and padding -->
         <EditText
             android:id="@+id/numberToCalc"
             android:layout_width="match_parent"
@@ -26,7 +25,6 @@
             android:inputType="number"
             android:padding="8dp" />
 
-        <!-- Show Button -->
         <Button
             android:id="@+id/buttonShow"
             android:layout_width="wrap_content"
@@ -35,7 +33,6 @@
             android:layout_marginTop="8dp"
             android:text="Show" />
 
-        <!-- TextView for displaying error messages -->
         <TextView
             android:id="@+id/textViewError"
             android:layout_width="match_parent"
@@ -44,7 +41,6 @@
             android:textColor="@android:color/holo_red_dark"
             android:textSize="14sp" />
 
-        <!-- RadioGroup with options -->
         <RadioGroup
             android:id="@+id/listSelect"
             android:layout_width="match_parent"
@@ -75,7 +71,6 @@
         </RadioGroup>
     </LinearLayout>
 
-    <!-- ListView for displaying results -->
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
